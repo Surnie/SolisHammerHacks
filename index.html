@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>SolisHammerHacks</title>
+    <style>
+        img {
+            width: 600px;
+            height: auto;
+        }
+
+      h1 {
+        color: red
+    }
+    </style>
+
+
+</head>
+<body>
+    <h1>SolisHammerHacks</h1>
+    <p>I think html is cool</p>
+
+    <img src="https://media.wired.com/photos/59322d4a58b0d64bb35d0149/master/w_2560%2Cc_limit/762cb92a-0139-4070-a6d8-59de4eddcbc8-1.jpg">
+
+    <blockquote> "No matter what happens, always stay hydrated. -Unknown"</blockquote>
+    <button onclick="changeQuote()">Change Quote</button>
+
+    <script>
+        var index = 0;
+
+        function changeQuote() {
+            var quotes = [
+                `"This is a place holder quote -Jacob Solis"`,
+                `"I wonder whats for dinner - Jacob Solis"`,
+                `"This is getting hard to follow... - Jacob Solis"`,
+                `"No matter what happens, always stay hydrated. -Unknown"`
+            ];
+
+        var blockquote = document.querySelector("blockquote");
+        blockquote.innerHTML = quotes[index];
+
+        index++;
+        if (index >= 4) {
+            index = 0;
+        }
+        
+        }
+    </script>
+</body>
